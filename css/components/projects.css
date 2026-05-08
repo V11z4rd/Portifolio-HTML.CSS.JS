@@ -1,0 +1,108 @@
+/* ===== projects Section Styles ===== */
+
+.projects {
+    padding: 4rem 3rem;
+    background-color: #dfdfdf;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.projects h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2b551a;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.projects h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #2b551a;
+    border-radius: 2px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projects-filter {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.5rem 1rem;
+    background-color: rgba(43, 85, 26, 0.2);
+    color: #ffffff;
+    border: 1px solid #2b551a;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: #2b551a;
+}
+
+/* Responsive - Tablet */
+@media (max-width: 1024px) {
+    .projects {
+        padding: 3rem 2rem;
+    }
+
+    .projects h2 {
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+    .projects {
+        padding: 2rem 1.5rem;
+    }
+
+    .projects h2 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects {
+        padding: 1.5rem 1rem;
+    }
+
+    .projects h2 {
+        font-size: 1.5rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}

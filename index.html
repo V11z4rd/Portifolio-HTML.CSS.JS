@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portifolio</title>
+    <meta name="description" content="Meu portifolio pessoal.">
+
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="./css/variables.css" />
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/components/header.css">
+    <link rel="stylesheet" href="./css/components/hero.css">
+    <link rel="stylesheet" href="./css/components/projects.css">
+    <link rel="stylesheet" href="./css/components/projectcard.css">
+    <link rel="stylesheet" href="./css/components/skills.css">
+    <link rel="stylesheet" href="./css/components/aboutme.css">
+    <link rel="stylesheet" href="./css/components/footer.css">
+
+</head>
+<body>
+    <header>
+        <h1><a href="#"><img src="./assets/image/logo/Logo-Vz.png" alt="Logo"></a></h1>
+
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#aboutme">Sobre mim</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Seção de destaque (Hero) -->
+        <section id="hero" class="hero">
+            <div class="hero-text">
+                <h1>Construindo soluções reais atráves de código</h1>
+                <p>Desenvolvedor focado em criar experiências digitais excepcionais, tornando ideias em realidade.</p>
+            </div>
+            <img src="./assets/image/hero/hero.gif" alt="Imagem de destaque do portifolio">
+        </section>
+        
+        <!-- Seção de Projetos -->
+        <section id="projects" class="projects">
+            <h2>Meus Projetos</h2>
+
+            <div class="projects-filter">
+                <button aria-pressed="true" class="filter-btn active" data-filter="all">Todos</button>
+                <button aria-pressed="false" class="filter-btn" data-filter="html">HTML</button>
+                <button aria-pressed="false" class="filter-btn" data-filter="css">CSS</button>
+                <button aria-pressed="false" class="filter-btn" data-filter="js">JavaScript</button>
+                <button aria-pressed="false" class="filter-btn" data-filter="react">React</button>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card" data-tech="html,css">
+                    <ul class="project-links">
+                        <li><a href="https://github.com/V11z4rd/LinkHub-Site-Template-1"><img src="./assets/image/projects/github.png" alt="GitHub"></a></li>
+                        <li><a href=""><img src="./assets/image/projects/demo.png" alt="Demo"></a></li>
+                        <li><img src="./assets/image/status/active.png" alt="status"></li>
+                    </ul>
+                    <img src="./assets/image/projects/linkhub.png" alt="Preview do projeto LinkHub - Template 1">
+                    <h3>LinkHub</h3>
+                    <p>Descrição em breve.</p>
+                    <ul class="project-tech">
+                        <li><img src="./assets/image/projects/html.png" alt="HTML"></li>
+                        <li><img src="./assets/image/projects/css.png" alt="CSS"></li>
+                    </ul>
+                </div>
+                
+                <div class="project-card" data-tech="html,css">
+                    <ul class="project-links">
+                        <li><a href="https://github.com/V11z4rd/Dermacare-Site-Template-2"><img src="./assets/image/projects/github.png" alt="GitHub"></a></li>
+                        <li><a href=""><img src="./assets/image/projects/demo.png" alt="Demo"></a></li>
+                        <li><img src="./assets/image/status/active.png" alt="status"></li>
+                    </ul>
+                    <img src="./assets/image/projects/dermacare.png" alt="Preview do projeto Dermacare - Template 2">
+                    <h3>Dermacare</h3>
+                    <p>Descrição em breve.</p>
+                    <ul class="project-tech">
+                        <li><img src="./assets/image/projects/html.png" alt="HTML"></li>
+                        <li><img src="./assets/image/projects/css.png" alt="CSS"></li>
+                    </ul>
+                </div>
+
+                <div class="project-card" data-tech="typescript,react,html,tailwind,csharp">
+                    <ul class="project-links">
+                        <li><a href=""><img src="./assets/image/projects/github.png" alt="GitHub"></a></li>
+                        <li><a href=""><img src="./assets/image/projects/demo.png" alt="Demo"></a></li>
+                        <li><img src="./assets/image/status/active.png" alt="status"></li>
+                    </ul>
+                    <img src="./assets/image/projects/project3.png" alt="Preview do projeto Readers - Rede social para leitores">
+                    <h3>Readers</h3>
+                    <p>Descrição em breve.</p>
+                    <ul class="project-tech">
+                        <li><img src="./assets/image/projects/typescript.png" alt="Typescript"></li>
+                        <li><img src="./assets/image/projects/react.png" alt="React"></li>
+                        <li><img src="./assets/image/projects/html.png" alt="HTML"></li>
+                        <li><img src="./assets/image/projects/tailwind.png" alt="Tailwind CSS"></li>
+                        <li><img src="./assets/image/projects/csharp.png" alt="C#"></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Skills -->
+        <section id="skills" class="skills">
+        </section>
+
+        <!-- Seção de Sobre mim -->
+        <section id="aboutme" class="aboutMe">
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
