@@ -1,0 +1,38 @@
+/* Configurações Globais do Corpo da Página */
+
+@import url('./variable.css'); /* Importa as variáveis para usar os tokens de cor e tipografia */
+
+body {
+    background-color: var(--bg-page);
+    font-family: var(--fonte-principal);
+    color: var(--text-on-dark); /* Cor padrão para textos no escuro */
+    line-height: 1.6; /* Melhora a leitura */
+}
+
+/* Rolagem suave (smooth scroll) quando clicar nos links do menu */
+html {
+    scroll-behavior: smooth;
+}
+
+
+.container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+
+.section-plate {
+    margin: 4rem auto; 
+    max-width: var(--container-max-width);
+    border-radius: var(--plate-radius);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Sombra elegante de profundidade */
+    overflow: hidden;
+}
+
+/* Títulos padrões das seções */
+.section-plate h2 {
+    font-size: 2.5rem;
+    font-weight: var(--fw-bold);
+    margin-bottom: 2rem;
+}

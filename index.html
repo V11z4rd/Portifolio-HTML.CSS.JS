@@ -8,20 +8,13 @@
     <title>Portifolio</title>
     <meta name="description" content="Meu portifolio pessoal.">
 
-    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./assets/image/favicon/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="./css/variables.css" />
-
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/components/header.css">
-    <link rel="stylesheet" href="./css/components/hero.css">
-    <link rel="stylesheet" href="./css/components/projects.css">
-    <link rel="stylesheet" href="./css/components/projectcard.css">
-    <link rel="stylesheet" href="./css/components/skillsection.css">
-    <link rel="stylesheet" href="./css/components/aboutme.css">
-    <link rel="stylesheet" href="./css/components/footer.css">
-
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/components/header.css">
+    <link rel="stylesheet" href="./assets/css/components/footer.css">
 </head>
 
 <body>
@@ -39,21 +32,19 @@
     </header>
 
     <main>
-        <!-- Seção de destaque (Hero) -->
-        <section id="hero" class="hero">
-
-            <div class="hero-text">
-                <h1>Construindo soluções reais atráves de código</h1>
-                <p>Desenvolvedor focado em criar experiências digitais excepcionais, tornando ideias em realidade.</p>
+        <section id="hero" class="hero section-plate">
+            <div class="container hero-container">
+                <div class="hero-text">
+                    <h1>Construindo soluções reais atráves de código</h1>
+                    <p>Desenvolvedor focado em criar experiências digitais excepcionais, tornando ideias em realidade.</p>
+                </div>
+                <img src="./assets/image/hero/hero.gif" alt="Imagem de destaque do portifolio">
             </div>
-            <img src="./assets/image/hero/hero.gif" alt="Imagem de destaque do portifolio">
         </section>
 
-        <!-- Seção de Projetos -->
-        <section id="projects" class="projects">
+        <section id="projects" class="projects section-plate">
             <div class="container">
                 <h2>Projetos</h2>
-
 
                 <div class="projects-filter">
                     <button aria-pressed="true" class="filter-btn active" data-filter="all">Todos</button>
@@ -68,99 +59,20 @@
                     <button aria-pressed="false" class="filter-btn" data-filter="sql">SQL</button>
                 </div>
 
-                <div class="projects-grid">
-
-                    <!-- ===== Card Projeto Linkhub =====-->
-                    <div class="project-card" data-tech="html,css">
-                        <ul class="project-links">
-                            <li>
-                                <a href="https://github.com/V11z4rd/LinkHub-Site-Template-1"><img
-                                        src="./assets/image/icon/github.png" alt="GitHub"></a>
-                            </li>
-                            <li>
-                                <a href=""><img src="./assets/image/icon/demo.png" alt="Demo"></a>
-                            </li>
-                            <li>
-                                <img src="./assets/image/status/active.png" alt="status">
-                            </li>
-                        </ul>
-
-                        <img src="./assets/image/projects/linkhub.png" alt="Preview do projeto LinkHub - Template 1">
-
-                        <h3>LinkHub</h3>
-                        <p>Descrição em breve.</p>
-                        <ul class="project-tech">
-                            <li><img src="./assets/image/icon/html.png" alt="HTML"></li>
-                            <li><img src="./assets/image/icon/css.png" alt="CSS"></li>
-                        </ul>
-                    </div>
-
-                    <!-- ===== Card Projeto Dermacare ===== -->
-                    <div class="project-card" data-tech="html,css">
-                        <ul class="project-links">
-                            <li>
-                                <a href="https://github.com/V11z4rd/Dermacare-Site-Template-2"><img
-                                        src="./assets/image/icon/github.png" alt="GitHub"></a>
-                            </li>
-                            <li>
-                                <a href=""><img src="./assets/image/icon/demo.png" alt="Demo"></a>
-                            </li>
-                            <li>
-                                <img src="./assets/image/status/active.png" alt="status">
-                            </li>
-                        </ul>
-                        <img src="./assets/image/projects/dermacare.png"
-                            alt="Preview do projeto Dermacare - Template 2">
-                        <h3>Dermacare</h3>
-                        <p>Descrição em breve.</p>
-                        <ul class="project-tech">
-                            <li><img src="./assets/image/icon/html.png" alt="HTML"></li>
-                            <li><img src="./assets/image/icon/css.png" alt="CSS"></li>
-                        </ul>
-                    </div>
-
-
-                    <!-- ===== Card Projeto Readers ===== -->
-                    <div class="project-card" data-tech="typescript,react,html,tailwind,csharp">
-                        <ul class="project-links">
-                            <li>
-                                <a href=""><img src="./assets/image/icon/github.png" alt="GitHub"></a>
-                            </li>
-                            <li>
-                                <a href=""><img src="./assets/image/icon/demo.png" alt="Demo"></a>
-                            </li>
-                            <li>
-                                <img src="./assets/image/status/active.png" alt="status">
-                            </li>
-                        </ul>
-
-                        <img src="./assets/image/projects/project3.png"
-                            alt="Preview do projeto Readers - Rede social para leitores">
-                        <h3>Readers</h3>
-                        <p>Descrição em breve.</p>
-
-                        <ul class="project-tech">
-                            <li><img src="./assets/image/icon/typescript.png" alt="Typescript"></li>
-                            <li><img src="./assets/image/icon/react.png" alt="React"></li>
-                            <li><img src="./assets/image/icon/html.png" alt="HTML"></li>
-                            <li><img src="./assets/image/icon/tailwind.png" alt="Tailwind CSS"></li>
-                            <li><img src="./assets/image/icon/csharp.png" alt="C#"></li>
-                        </ul>
-                    </div>
+                <div class="projects-white-box">
+                    <div class="projects-grid" id="projects-grid-container">
+                        </div>
                 </div>
             </div>
         </section>
 
-        <!-- ===== Seção de Skills ===== -->
-        <section id="skills" class="skills">
+        <section id="skills" class="skills section-plate">
             <div class="container">
                 <h2 class="section-title">Minhas Habilidades</h2>
 
                 <div class="skills-selector" role="tablist">
-                    <button role="tab" aria-selected="true" class="selector-btn active" data-filter="hardSkill">Hard
-                        Skills</button>
-                    <button role="tab" aria-selected="false" class="selector-btn" data-filter="softSkill">Soft
-                        Skills</button>
+                    <button role="tab" aria-selected="true" class="selector-btn active" data-filter="hardSkill">Hard Skills</button>
+                    <button role="tab" aria-selected="false" class="selector-btn" data-filter="softSkill">Soft Skills</button>
                 </div>
 
                 <div class="skills-content">
@@ -224,8 +136,7 @@
             </div>
         </section>
 
-        <!-- Seção de Sobre mim -->
-        <section id="aboutme" class="aboutMe">
+        <section id="aboutme" class="aboutMe section-plate">
             <div class="container">
                 <h2>Sobre mim</h2>
                 <div class="aboutMe-content">
@@ -244,15 +155,35 @@
     </main>
 
     <footer>
-        <div>
-            <h2>Contato</h2>
-            <ul class="social-links">
-                <li><a href="https://github.com/V11z4rd" target="_blank" rel="noopener noreferrer"><img src="" alt="GitHub"><p>V11z4rd</p></a></li>
-                <li><a href="https://www.linkedin.com/in/v11z4rd/" target="_blank" rel="noopener noreferrer"><img src="" alt="LinkedIn"><p>Antonio Marcos F. Dias</p></a></li>
-            </ul>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="./assets/image/logo/Logo-Vz.png" alt="Logo Vz">
+            </div>
+
+            <div class="footer-contact">
+                <h2>Contato</h2>
+                <ul class="contact-list">
+                    <li>
+                        <img src="./assets/image/icon/gmail.png" alt="Email">
+                        <a href="mailto:v11zard1111000011@gmail.com">v11zard1111000011@gmail.com</a>
+                    </li>
+                    <li>
+                        <img src="./assets/image/icon/linkedin.png" alt="LinkedIn">
+                        <a href="https://www.linkedin.com/in/ant%C3%B4nio-marcos-f-dias-b8a79a2b7/" target="_blank" rel="noopener noreferrer">Antonio Marcos F. Dias</a>
+                    </li>
+                    <li>
+                        <img src="./assets/image/icon/github.png" alt="GitHub">
+                        <a href="https://github.com/V11z4rd" target="_blank" rel="noopener noreferrer">V11zard</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <img src="./assets/image/logo/Logo-Vz.png" alt="Logo do portifolio">
-        <p>&copy; 2024 V11z4rd. Todos os direitos reservados.</p>
+
+        <div class="footer-bottom">
+            <p>Projetado e codificado por Antonio Marcos &copy; 2026</p>
+        </div>
     </footer>
+
+    <script type="module" src="./js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,54 @@
+@import url('../variable.css');
+
+header {
+    background-color: var(--bg-header-footer);
+    color: var(--text-on-dark);
+    padding: 1.2rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    /* Faz o header grudar no topo da tela */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    
+    /* Dá um destaque do fundo da página */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+header h1 a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+/* Tratamento da Logo */
+header h1 img {
+    height: 45px;
+    transition: transform 0.3s ease;
+    filter: brightness(0) invert(1); 
+}
+
+header h1 img:hover {
+    transform: scale(1.05);
+}
+
+header nav ul {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+}
+
+header nav a {
+    color: var(--text-on-dark);
+    text-decoration: none;
+    font-weight: var(--fw-medium);
+    font-size: 1.1rem;
+    transition: color 0.3s, opacity 0.3s;
+}
+
+header nav a:hover {
+    color: var(--color-white-pure);
+    opacity: 0.7;
+}

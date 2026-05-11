@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+    /* 📝 TIPOGRAFIA */
+    --fonte-principal: 'Ubuntu', sans-serif;
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-bold: 700;
+
+    /* 🎨 TOKENS PRIMITIVOS (A Tinta Bruta baseada nas suas HEX) */
+    --color-dark-gray: #221e1e;   /* Fundo da tela e Cards */
+    --color-blue-dark: #2d3047;   /* Header, Footer, Botão Ativo */
+    --color-blue-deep: #02111b;   /* Fundo do Hero e Sobre Mim */
+    --color-white-off: #FAFAFA;   /* Textos Principais */
+    --color-white-pure: #FFFFFC;  /* Caixa de Projetos, Filtros e Fundos Claros */
+    --color-gray-mid: #545454;    /* Selector inativo */
+
+    /* 🏗️ TOKENS SEMÂNTICOS (A Aplicação da Tinta) */
+    
+    /* Fundos */
+    --bg-page: var(--color-dark-gray);
+    --bg-header-footer: var(--color-blue-dark);
+    --bg-plate-dark: var(--color-blue-deep);
+    --bg-plate-light: var(--color-white-pure);
+    --bg-card: var(--color-dark-gray);
+
+    /* Textos */
+    --text-on-dark: var(--color-white-off);
+    --text-on-light: var(--color-blue-deep);
+    --text-muted: var(--color-gray-mid);
+
+    /* Elementos Interativos (Botões de Filtro/Abas) */
+    --element-bg: var(--color-white-pure);
+    --element-text: var(--color-blue-dark);
+    --element-border: var(--color-blue-dark);
+    --element-active-bg: var(--color-blue-dark);
+    --element-active-text: var(--color-white-off);
+
+    /* 📐 ESTRUTURA GERAL */
+    --container-max-width: 1200px;
+    --plate-radius: 16px; /* Arredondamento das placas */
+}

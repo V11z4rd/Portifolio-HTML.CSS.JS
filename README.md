@@ -44,12 +44,11 @@ templateSite2/
 --
 
 ## 🔧 Melhorias
-- Adicionar as sessões de skills, sobre mim e footer.
-- Adicionar JS para funcionamento do filtro
-- Atualizar as informações dos  card de projeto
-- Aplicar paleta de cores e trocar imagem do Hero.
-- Adição de div container
+- Adicionar estilos
 - Adição de favicon e demais icones
+- Adicionar JS para os cards de Projetos
+- Adicionar JS para funcionamento do filtro
+
 
 
 ## Versão
