@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,16 +13,17 @@
     <link rel="stylesheet" href="./css/variables.css" />
 
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/components/header.css">
     <link rel="stylesheet" href="./css/components/hero.css">
     <link rel="stylesheet" href="./css/components/projects.css">
     <link rel="stylesheet" href="./css/components/projectcard.css">
-    <link rel="stylesheet" href="./css/components/skills.css">
+    <link rel="stylesheet" href="./css/components/skillsection.css">
     <link rel="stylesheet" href="./css/components/aboutme.css">
     <link rel="stylesheet" href="./css/components/footer.css">
 
 </head>
+
 <body>
     <header>
         <h1><a href="#"><img src="./assets/image/logo/Logo-Vz.png" alt="Logo"></a></h1>
@@ -35,91 +37,222 @@
             </ul>
         </nav>
     </header>
-    
+
     <main>
         <!-- Seção de destaque (Hero) -->
         <section id="hero" class="hero">
+
             <div class="hero-text">
                 <h1>Construindo soluções reais atráves de código</h1>
                 <p>Desenvolvedor focado em criar experiências digitais excepcionais, tornando ideias em realidade.</p>
             </div>
             <img src="./assets/image/hero/hero.gif" alt="Imagem de destaque do portifolio">
         </section>
-        
+
         <!-- Seção de Projetos -->
         <section id="projects" class="projects">
-            <h2>Meus Projetos</h2>
+            <div class="container">
+                <h2>Projetos</h2>
 
-            <div class="projects-filter">
-                <button aria-pressed="true" class="filter-btn active" data-filter="all">Todos</button>
-                <button aria-pressed="false" class="filter-btn" data-filter="html">HTML</button>
-                <button aria-pressed="false" class="filter-btn" data-filter="css">CSS</button>
-                <button aria-pressed="false" class="filter-btn" data-filter="js">JavaScript</button>
-                <button aria-pressed="false" class="filter-btn" data-filter="react">React</button>
-            </div>
 
-            <div class="projects-grid">
-                <div class="project-card" data-tech="html,css">
-                    <ul class="project-links">
-                        <li><a href="https://github.com/V11z4rd/LinkHub-Site-Template-1"><img src="./assets/image/projects/github.png" alt="GitHub"></a></li>
-                        <li><a href=""><img src="./assets/image/projects/demo.png" alt="Demo"></a></li>
-                        <li><img src="./assets/image/status/active.png" alt="status"></li>
-                    </ul>
-                    <img src="./assets/image/projects/linkhub.png" alt="Preview do projeto LinkHub - Template 1">
-                    <h3>LinkHub</h3>
-                    <p>Descrição em breve.</p>
-                    <ul class="project-tech">
-                        <li><img src="./assets/image/projects/html.png" alt="HTML"></li>
-                        <li><img src="./assets/image/projects/css.png" alt="CSS"></li>
-                    </ul>
-                </div>
-                
-                <div class="project-card" data-tech="html,css">
-                    <ul class="project-links">
-                        <li><a href="https://github.com/V11z4rd/Dermacare-Site-Template-2"><img src="./assets/image/projects/github.png" alt="GitHub"></a></li>
-                        <li><a href=""><img src="./assets/image/projects/demo.png" alt="Demo"></a></li>
-                        <li><img src="./assets/image/status/active.png" alt="status"></li>
-                    </ul>
-                    <img src="./assets/image/projects/dermacare.png" alt="Preview do projeto Dermacare - Template 2">
-                    <h3>Dermacare</h3>
-                    <p>Descrição em breve.</p>
-                    <ul class="project-tech">
-                        <li><img src="./assets/image/projects/html.png" alt="HTML"></li>
-                        <li><img src="./assets/image/projects/css.png" alt="CSS"></li>
-                    </ul>
+                <div class="projects-filter">
+                    <button aria-pressed="true" class="filter-btn active" data-filter="all">Todos</button>
+                    <button aria-pressed="false" class="filter-btn" data-filter="html">HTML</button>
+                    <button aria-pressed="false" class="filter-btn" data-filter="css">CSS</button>
+                    <button aria-pressed="false" class="filter-btn" data-filter="js">JavaScript</button>
+                    <button aria-pressed="false" class="filter-btn" data-filter="react">React</button>
+                    <button aria-pressed="false" class="filter-btn" data-filter="next">Next.js</button>
+                    <button aria-pressed="false" class="filter-btn" data-filter="python">Python</button>
+                    <button aria-pressed="false" class="filter-btn" data-filter="typescript">Typescript</button>
+                    <button aria-pressed="false" class="filter-btn" data-filter="csharp">C#</button>
+                    <button aria-pressed="false" class="filter-btn" data-filter="sql">SQL</button>
                 </div>
 
-                <div class="project-card" data-tech="typescript,react,html,tailwind,csharp">
-                    <ul class="project-links">
-                        <li><a href=""><img src="./assets/image/projects/github.png" alt="GitHub"></a></li>
-                        <li><a href=""><img src="./assets/image/projects/demo.png" alt="Demo"></a></li>
-                        <li><img src="./assets/image/status/active.png" alt="status"></li>
-                    </ul>
-                    <img src="./assets/image/projects/project3.png" alt="Preview do projeto Readers - Rede social para leitores">
-                    <h3>Readers</h3>
-                    <p>Descrição em breve.</p>
-                    <ul class="project-tech">
-                        <li><img src="./assets/image/projects/typescript.png" alt="Typescript"></li>
-                        <li><img src="./assets/image/projects/react.png" alt="React"></li>
-                        <li><img src="./assets/image/projects/html.png" alt="HTML"></li>
-                        <li><img src="./assets/image/projects/tailwind.png" alt="Tailwind CSS"></li>
-                        <li><img src="./assets/image/projects/csharp.png" alt="C#"></li>
-                    </ul>
+                <div class="projects-grid">
+
+                    <!-- ===== Card Projeto Linkhub =====-->
+                    <div class="project-card" data-tech="html,css">
+                        <ul class="project-links">
+                            <li>
+                                <a href="https://github.com/V11z4rd/LinkHub-Site-Template-1"><img
+                                        src="./assets/image/icon/github.png" alt="GitHub"></a>
+                            </li>
+                            <li>
+                                <a href=""><img src="./assets/image/icon/demo.png" alt="Demo"></a>
+                            </li>
+                            <li>
+                                <img src="./assets/image/status/active.png" alt="status">
+                            </li>
+                        </ul>
+
+                        <img src="./assets/image/projects/linkhub.png" alt="Preview do projeto LinkHub - Template 1">
+
+                        <h3>LinkHub</h3>
+                        <p>Descrição em breve.</p>
+                        <ul class="project-tech">
+                            <li><img src="./assets/image/icon/html.png" alt="HTML"></li>
+                            <li><img src="./assets/image/icon/css.png" alt="CSS"></li>
+                        </ul>
+                    </div>
+
+                    <!-- ===== Card Projeto Dermacare ===== -->
+                    <div class="project-card" data-tech="html,css">
+                        <ul class="project-links">
+                            <li>
+                                <a href="https://github.com/V11z4rd/Dermacare-Site-Template-2"><img
+                                        src="./assets/image/icon/github.png" alt="GitHub"></a>
+                            </li>
+                            <li>
+                                <a href=""><img src="./assets/image/icon/demo.png" alt="Demo"></a>
+                            </li>
+                            <li>
+                                <img src="./assets/image/status/active.png" alt="status">
+                            </li>
+                        </ul>
+                        <img src="./assets/image/projects/dermacare.png"
+                            alt="Preview do projeto Dermacare - Template 2">
+                        <h3>Dermacare</h3>
+                        <p>Descrição em breve.</p>
+                        <ul class="project-tech">
+                            <li><img src="./assets/image/icon/html.png" alt="HTML"></li>
+                            <li><img src="./assets/image/icon/css.png" alt="CSS"></li>
+                        </ul>
+                    </div>
+
+
+                    <!-- ===== Card Projeto Readers ===== -->
+                    <div class="project-card" data-tech="typescript,react,html,tailwind,csharp">
+                        <ul class="project-links">
+                            <li>
+                                <a href=""><img src="./assets/image/icon/github.png" alt="GitHub"></a>
+                            </li>
+                            <li>
+                                <a href=""><img src="./assets/image/icon/demo.png" alt="Demo"></a>
+                            </li>
+                            <li>
+                                <img src="./assets/image/status/active.png" alt="status">
+                            </li>
+                        </ul>
+
+                        <img src="./assets/image/projects/project3.png"
+                            alt="Preview do projeto Readers - Rede social para leitores">
+                        <h3>Readers</h3>
+                        <p>Descrição em breve.</p>
+
+                        <ul class="project-tech">
+                            <li><img src="./assets/image/icon/typescript.png" alt="Typescript"></li>
+                            <li><img src="./assets/image/icon/react.png" alt="React"></li>
+                            <li><img src="./assets/image/icon/html.png" alt="HTML"></li>
+                            <li><img src="./assets/image/icon/tailwind.png" alt="Tailwind CSS"></li>
+                            <li><img src="./assets/image/icon/csharp.png" alt="C#"></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Seção de Skills -->
+        <!-- ===== Seção de Skills ===== -->
         <section id="skills" class="skills">
+            <div class="container">
+                <h2 class="section-title">Minhas Habilidades</h2>
+
+                <div class="skills-selector" role="tablist">
+                    <button role="tab" aria-selected="true" class="selector-btn active" data-filter="hardSkill">Hard
+                        Skills</button>
+                    <button role="tab" aria-selected="false" class="selector-btn" data-filter="softSkill">Soft
+                        Skills</button>
+                </div>
+
+                <div class="skills-content">
+                    <div class="skill-pane active" id="hard-skills-pane">
+                        <div class="skill-category">
+                            <h4>Frontend</h4>
+                            <ul class="icon-list">
+                                <li><img src="./assets/image/icon/html.png" alt="HTML5"></li>
+                                <li><img src="./assets/image/icon/css.png" alt="CSS3"></li>
+                                <li><img src="./assets/image/icon/javascript.png" alt="JavaScript"></li>
+                                <li><img src="./assets/image/icon/typescript.png" alt="TypeScript"></li>
+                                <li><img src="./assets/image/icon/react.png" alt="React"></li>
+                            </ul>
+                        </div>
+
+                        <div class="skill-category">
+                            <h4>Backend</h4>
+                            <ul class="icon-list">
+                                <li><img src="./assets/image/icon/csharp.png" alt="C#"></li>
+                                <li><img src="./assets/image/icon/python.png" alt="Python"></li>
+                            </ul>
+                        </div>
+
+                        <div class="skill-category">
+                            <h4>Banco de Dados</h4>
+                            <ul class="icon-list">
+                                <li><img src="./assets/image/icon/sql.png" alt="SQL"></li>
+                            </ul>
+                        </div>
+
+                        <div class="skill-category">
+                            <h4>Ferramentas</h4>
+                            <ul class="icon-list">
+                                <li><img src="./assets/image/icon/git.png" alt="Git"></li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="skill-pane" id="soft-skills-pane" style="display: none;">
+                        <dl class="soft-skills-list">
+                            <div class="soft-skill-item">
+                                <dt>Comunicação Assertiva</dt>
+                                <dd>Foco em transmitir informações técnicas de forma clara e objetiva. Experiência em traduzir conceitos complexos para diferentes públicos, lapidada em palestras e mentorias.</dd>
+                            </div>
+                            <div class="soft-skill-item">
+                                <dt>Trabalho em Equipe</dt>
+                                <dd>Atuação colaborativa focada em resultados comuns. Experiência prática na coordenação de grupos de monitores, garantindo alinhamento e suporte mútuo.</dd>
+                            </div>
+                            <div class="soft-skill-item">
+                                <dt>Adaptabilidade Técnica</dt>
+                                <dd>Capacidade de transitar entre diferentes stacks e tecnologias conforme a necessidade do projeto, priorizando a lógica de solução sobre a ferramenta.</dd>
+                            </div>
+                            <div class="soft-skill-item">
+                                <dt>Pensamento Estruturado</dt>
+                                <dd>Abordagem investigativa para entender a real dor do problema antes da codificação. Acredito que perguntar corretamente é o primeiro passo para uma entrega precisa.</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Seção de Sobre mim -->
         <section id="aboutme" class="aboutMe">
+            <div class="container">
+                <h2>Sobre mim</h2>
+                <div class="aboutMe-content">
+                    <p>Estudante de ADS com cerca de 3 anos de dedicação à programação, focado em construir soluções que aliam lógica estruturada e impacto real. Minha trajetória é marcada pela versatilidade: trago a disciplina e o rigor, com prazos que desenvolvi no setor administrativo industrial, somados à experiência de liderança e à comunicação clara que adquiri ao coordenar projetos de inclusão digital para idosos. Atualmente, foco em organizar e documentar meu ecossistema de projetos no GitHub, priorizando sempre a arquitetura e a qualidade da entrega final.</p>
+                </div>
+                <div class="aboutMe-highlight">
+                    <h3>Destaques rápidos</h3>
+                    <ul>
+                        <li>🎓Cursando ADS (Unisanta)</li>
+                        <li>🏭Experiência em ambiente corporativo/industrial</li>
+                        <li>🤝Experiência em voluntariado de inclusão digital à 3ª idade</li>
+                    </ul>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-
+        <div>
+            <h2>Contato</h2>
+            <ul class="social-links">
+                <li><a href="https://github.com/V11z4rd" target="_blank" rel="noopener noreferrer"><img src="" alt="GitHub"><p>V11z4rd</p></a></li>
+                <li><a href="https://www.linkedin.com/in/v11z4rd/" target="_blank" rel="noopener noreferrer"><img src="" alt="LinkedIn"><p>Antonio Marcos F. Dias</p></a></li>
+            </ul>
+        </div>
+        <img src="./assets/image/logo/Logo-Vz.png" alt="Logo do portifolio">
+        <p>&copy; 2024 V11z4rd. Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>

@@ -71,6 +71,7 @@
 }
 
 .project-card h3 {
+    margin-left: 0.4rem;
     font-size: 1.5rem;
     font-weight: 600;
     color: #ffffff;
@@ -79,6 +80,7 @@
 }
 
 .project-card p {
+    margin-left: 0.4rem;
     font-size: 1rem;
     color: #e0e0e0;
     line-height: 1.6;

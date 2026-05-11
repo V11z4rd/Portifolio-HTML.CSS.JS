@@ -1,0 +1,88 @@
+/* Variáveis para facilitar sua vida */
+:root {
+    --cor-fundo-card: #ffffff;
+    --cor-detalhe: #333333;
+    --cor-cinza-claro: #f4f4f4;
+    --aba-ativa: #333333;
+    --aba-inativa: #cccccc;
+}
+
+/* Container das Abas */
+.skills-selector {
+    display: flex;
+    gap: 5px;
+    margin-bottom: -2px; /* Encosta na borda do conteúdo */
+}
+
+.selector-btn {
+    padding: 10px 30px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    transition: all 0.3s;
+    
+    /* O SEGREDO DO MARCADOR: Cria o corte diagonal na direita */
+    background-color: var(--aba-inativa);
+    color: #666;
+    clip-path: polygon(0 0, 85% 0, 100% 100%, 0% 100%);
+}
+
+.selector-btn.active {
+    background-color: var(--aba-ativa);
+    color: white;
+    padding-right: 40px; /* Aumenta um pouco a aba ativa */
+}
+
+/* Área do Conteúdo (A "Folha" da pasta) */
+.skills-content {
+    border: 2px solid var(--aba-ativa);
+    padding: 2rem;
+    background-color: var(--cor-fundo-card);
+    min-height: 300px;
+}
+
+/* Estilização da DL (Soft Skills) */
+.soft-skills-list {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.soft-skill-item {
+    border-left: 4px solid var(--aba-ativa); /* Barrinha lateral elegante */
+    padding-left: 1rem;
+}
+
+.soft-skill-item dt {
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: var(--aba-ativa);
+    margin-bottom: 0.3rem;
+}
+
+.soft-skill-item dd {
+    margin: 0; /* Remove o recuo padrão do navegador */
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.icon-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.icon-list img {
+    height: 40px; /* Mantém todos do mesmo tamanho */
+    filter: grayscale(20%); /* Opcional: deixa mais sóbrio */
+    transition: transform 0.2s;
+}
+
+.icon-list img:hover {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
