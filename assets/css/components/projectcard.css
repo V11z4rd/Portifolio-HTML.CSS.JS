@@ -1,168 +1,266 @@
-/* ===== project Card Styles ===== */
+/* ==================================================
+   CARD BASE
+================================================== */
 
 .project-card {
-    background-color: rgba(41, 40, 40, 0.9);
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    background: var(--color-dark-gray);
+
+    border-radius: 28px;
+
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    font-family: 'Ubuntu', sans-serif;
+
     display: flex;
     flex-direction: column;
-    border: 1px solid #2b551a;
+
+    min-height: 520px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
+
+/* Hover elegante */
 
 .project-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,0.35);
 }
 
-/* project Links - Top */
-.project-links {
+/* ==================================================
+   TOPBAR
+================================================== */
+
+.project-topbar {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 1rem 1.5rem;
-    background-color: rgba(43, 85, 26, 0.1);
-    border-bottom: 1px solid #2b551a;
+    justify-content: space-between;
+
+    padding: 1rem 1.3rem;
+
+    background:
+        rgba(0,0,0,0.2);
 }
 
-.project-links li {
+/* ==================================================
+   LINKS
+================================================== */
+
+.project-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.project-actions a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 32px;
-    height: 32px;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
 }
 
-.project-links a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    transition: transform 0.2s ease;
+.project-actions a:hover {
+    background: var(--color-white-pure);
+
+    transform: scale(1.08);
 }
 
-.project-links a:hover {
-    transform: scale(1.1);
-}
-
-.project-links img {
+.project-actions img {
     width: 24px;
     height: 24px;
+
     object-fit: contain;
+
+    filter: brightness(0) invert(1);
+
+    transition: filter 0.25s ease;
 }
 
-/* project Image */
-.project-card > img {
+.project-actions a:hover img {
+    filter: brightness(0);
+}
+
+/* ==================================================
+   TIPO DO PROJETO
+================================================== */
+
+.project-type {
+    font-size: 1.2rem;
+    font-weight: var(--fw-bold);
+
+    color:
+        rgba(255,255,255,0.7);
+}
+
+/* ==================================================
+   STATUS
+================================================== */
+
+.project-status {
+    width: 22px;
+    height: 22px;
+
+    border-radius: 50%;
+}
+
+.project-status.online {
+    background: #59ff89;
+}
+
+.project-status.offline {
+    background: #777;
+}
+
+.project-status.wip {
+    background: #ffd166;
+}
+
+/* ==================================================
+   IMAGEM
+================================================== */
+
+.project-image {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-bottom: 2px solid #2b551a;
+    height: 230px;
+
+    overflow: hidden;
+
+    background: #5c5c5c;
 }
 
+.project-image img {
+    width: 100%;
+    height: 100%;
 
+    object-fit: cover;
 
-/* project Content */
-.project-card-content {
-    padding: 1.5rem;
-    flex-grow: 1;
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+/* ==================================================
+   CONTEÚDO
+================================================== */
+
+.project-content {
     display: flex;
     flex-direction: column;
+
+    flex-grow: 1;
+
+    padding: 1.8rem 1.5rem;
 }
+
+/* ==================================================
+   TÍTULO
+================================================== */
 
 .project-card h3 {
-    margin-left: 0.4rem;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #ffffff;
-    margin-bottom: 0.5rem;
-    padding-top: 0.5rem;
+    color: var(--color-white-off);
+
+    font-size: 2rem;
+    font-weight: var(--fw-bold);
+
+    text-align: center;
+
+    margin-bottom: 0.7rem;
+
+    text-decoration: underline;
 }
+
+/* ==================================================
+   DESCRIÇÃO
+================================================== */
 
 .project-card p {
-    margin-left: 0.4rem;
+    color: var(--color-white-off);
+
+    opacity: 0.9;
+
+    text-align: center;
+
     font-size: 1rem;
-    color: #e0e0e0;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-    flex-grow: 1;
+    font-weight: var(--fw-medium);
+
+    line-height: 1.5;
+
+    margin-bottom: 2rem;
 }
 
-/* project Tech - Bottom */
+/* ==================================================
+   TECHS
+================================================== */
+
 .project-tech {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.5rem;
-    padding: 0 1.5rem 1.5rem;
-    list-style: none;
-    margin: 0;
-}
-
-.project-tech li {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 0.8rem;
+
+    margin-top: auto;
+
+    list-style: none;
+
+    padding: 0;
 }
 
 .project-tech img {
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
+
     object-fit: contain;
-    transition: transform 0.2s ease;
+
+    transition: transform 0.25s ease;
 }
 
 .project-tech img:hover {
-    transform: scale(1.1);
+    transform: translateY(-4px);
 }
 
-/* Responsive - Tablet */
-@media (max-width: 1024px) {
-    .project-tech {
-        grid-template-columns: repeat(3, 1fr);
-    }
+/* =========================================
+   STATUS IMAGE
+========================================= */
+
+.project-status img {
+
+    width: 22px;
+    height: 22px;
+
+    object-fit: contain;
+
+    display: block;
 }
 
-/* Responsive - Mobile */
+/* ==================================================
+   RESPONSIVO
+================================================== */
+
 @media (max-width: 768px) {
-    .project-card-content {
-        padding: 1rem;
-    }
 
-    .project-links {
-        padding: 0.75rem 1rem;
-    }
-
-    .project-links li {
-        width: 28px;
-        height: 28px;
+    .project-card {
+        min-height: auto;
     }
 
     .project-card h3 {
-        font-size: 1.3rem;
+        font-size: 1.6rem;
     }
 
-    .project-card p {
-        font-size: 0.9rem;
+    .project-image {
+        height: 200px;
     }
 
-    .project-tech {
-        grid-template-columns: repeat(2, 1fr);
-        padding: 0 1rem 1rem;
-    }
-
-    .project-tech img {
-        width: 28px;
-        height: 28px;
-    }
-}
-
-@media (max-width: 480px) {
-    .project-tech {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .project-tech img {
-        width: 24px;
-        height: 24px;
-    }
 }

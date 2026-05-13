@@ -15,13 +15,12 @@ footer {
     margin: 0 auto;
 }
 
-/* Logo minimalista */
+
 .footer-logo img {
     height: 50px;
-    /* filter: brightness(0) invert(1);  */
 }
 
-/* Área de Contatos */
+
 .footer-contact h2 {
     font-size: 1.5rem;
     font-weight: var(--fw-bold);
@@ -32,14 +31,14 @@ footer {
 .contact-list {
     display: flex;
     flex-direction: column;
-    gap: 0.8rem; /* Espaço entre as linhas de contato */
+    gap: 0.8rem; 
     list-style: none;
 }
 
 .contact-list li {
     display: flex;
     align-items: center;
-    gap: 10px; /* Espaço entre o ícone e o texto */
+    gap: 10px; 
 }
 
 .contact-list li a {
@@ -55,25 +54,25 @@ footer {
     transform: translateX(5px);
 }
 
-/* Ajuste dos Ícones PNG/JPG */
+
 .contact-list img {
     width: 24px;
     height: 24px;
     object-fit: contain;
-    border-radius: 4px; /* Suaviza cantos do fundo branco se houver */
+    border-radius: 4px; 
 }
 
-/* Transforma o ícone do GitHub em branco */
+
 .contact-list img[alt="GitHub"] {
     filter: brightness(0) invert(1);
 }
 
-/* Área do Copyright */
+
 .footer-bottom {
     text-align: center;
     margin-top: 2rem;
     padding-top: 1rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Uma linha sutil separando */
+    border-top: 1px solid rgba(255, 255, 255, 0.1); 
 }
 
 .footer-bottom p {
@@ -82,20 +81,22 @@ footer {
     font-weight: var(--fw-light);
 }
 
-/* ===== Responsividade para Celulares ===== */
+/* ==================================================
+   RESPONSIVO
+================================================== */
+
 @media (max-width: 768px) {
     footer {
         padding: 2rem 1.5rem 1rem 1.5rem;
     }
 
     .footer-container {
-        flex-direction: column-reverse; /* Coloca a logo por baixo no celular */
+        flex-direction: column-reverse; 
         align-items: center;
         text-align: center;
         gap: 2rem;
     }
 
-    /* Centraliza a lista no celular */
     .contact-list li {
         justify-content: center; 
     }

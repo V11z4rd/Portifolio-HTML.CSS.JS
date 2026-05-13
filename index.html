@@ -10,10 +10,14 @@
 
     <link rel="icon" href="./assets/image/favicon/favicon.ico" type="image/x-icon">
 
-    <link rel="stylesheet" href="./css/variables.css" />
+    <link rel="stylesheet" href="./css/variable.css" />
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/components/header.css">
+    <link rel="stylesheet" href="./assets/css/components/hero.css">
+    <link rel="stylesheet" href="./assets/css/components/projects.css">
+    <link rel="stylesheet" href="./assets/css/components/skillsection.css">
+    <link rel="stylesheet" href="./assets/css/components/aboutme.css">
     <link rel="stylesheet" href="./assets/css/components/footer.css">
 </head>
 
@@ -36,113 +40,187 @@
             <div class="container hero-container">
                 <div class="hero-text">
                     <h1>Construindo soluções reais atráves de código</h1>
-                    <p>Desenvolvedor focado em criar experiências digitais excepcionais, tornando ideias em realidade.</p>
+                    <p>Desenvolvedor focado em criar experiências digitais excepcionais, tornando ideias em realidade.
+                    </p>
                 </div>
-                <img src="./assets/image/hero/hero.gif" alt="Imagem de destaque do portifolio">
+                <img src="./assets/image/hero/panter.png" alt="Imagem de destaque do portifolio">
             </div>
         </section>
 
         <section id="projects" class="projects section-plate">
             <div class="container">
-                <h2>Projetos</h2>
+                <div class="projects-header">
 
-                <div class="projects-filter">
-                    <button aria-pressed="true" class="filter-btn active" data-filter="all">Todos</button>
-                    <button aria-pressed="false" class="filter-btn" data-filter="html">HTML</button>
-                    <button aria-pressed="false" class="filter-btn" data-filter="css">CSS</button>
-                    <button aria-pressed="false" class="filter-btn" data-filter="js">JavaScript</button>
-                    <button aria-pressed="false" class="filter-btn" data-filter="react">React</button>
-                    <button aria-pressed="false" class="filter-btn" data-filter="next">Next.js</button>
-                    <button aria-pressed="false" class="filter-btn" data-filter="python">Python</button>
-                    <button aria-pressed="false" class="filter-btn" data-filter="typescript">Typescript</button>
-                    <button aria-pressed="false" class="filter-btn" data-filter="csharp">C#</button>
-                    <button aria-pressed="false" class="filter-btn" data-filter="sql">SQL</button>
+                    <h2>Projetos</h2>
+
+                    <div class="projects-filter-bar">
+
+                        <button class="filter-btn active" data-filter="all">
+                            Todos
+                        </button>
+
+                        <button class="filter-icon" data-filter="html">
+                            <img src="./assets/image/icon/html.png" alt="HTML">
+                        </button>
+
+                        <button class="filter-icon" data-filter="js">
+                            <img src="./assets/image/icon/js.png" alt="JavaScript">
+                        </button>
+
+                        <button class="filter-icon" data-filter="css">
+                            <img src="./assets/image/icon/css.png" alt="CSS">
+                        </button>
+
+                        <button class="filter-icon" data-filter="react">
+                            <img src="./assets/image/icon/react.png" alt="React">
+                        </button>
+
+                        <button class="filter-icon" data-filter="typescript">
+                            <img src="./assets/image/icon/typescript.png" alt="TypeScript">
+                        </button>
+
+                        <button class="filter-icon" data-filter="next">
+                            <img src="./assets/image/icon/nextjs.webp" alt="Next.js">
+                        </button>
+
+                        <button class="filter-icon" data-filter="csharp">
+                            <img src="./assets/image/icon/c-sharp.png" alt="C#">
+                        </button>
+
+                        <button class="filter-icon" data-filter="python">
+                            <img src="./assets/image/icon/python.png" alt="Python">
+                        </button>
+
+                        <button class="filter-icon" data-filter="sql">
+                            <img src="./assets/image/icon/sql.webp" alt="SQL">
+                        </button>
+
+                    </div>
+
                 </div>
 
                 <div class="projects-white-box">
                     <div class="projects-grid" id="projects-grid-container">
-                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="skills" class="skills section-plate">
-            <div class="container">
-                <h2 class="section-title">Minhas Habilidades</h2>
+            <div class="container skills-container">
 
                 <div class="skills-selector" role="tablist">
-                    <button role="tab" aria-selected="true" class="selector-btn active" data-filter="hardSkill">Hard Skills</button>
-                    <button role="tab" aria-selected="false" class="selector-btn" data-filter="softSkill">Soft Skills</button>
+                    <button role="tab" aria-selected="true" class="selector-btn active" data-filter="hardSkill">
+                        HARD SKILLS
+                    </button>
+
+                    <button role="tab" aria-selected="false" class="selector-btn" data-filter="softSkill">
+                        SOFT SKILLS
+                    </button>
                 </div>
 
-                <div class="skills-content">
-                    <div class="skill-pane active" id="hard-skills-pane">
-                        <div class="skill-category">
-                            <h4>Frontend</h4>
-                            <ul class="icon-list">
-                                <li><img src="./assets/image/icon/html.png" alt="HTML5"></li>
-                                <li><img src="./assets/image/icon/css.png" alt="CSS3"></li>
-                                <li><img src="./assets/image/icon/javascript.png" alt="JavaScript"></li>
-                                <li><img src="./assets/image/icon/typescript.png" alt="TypeScript"></li>
-                                <li><img src="./assets/image/icon/react.png" alt="React"></li>
-                            </ul>
+                <div class="skills-panel">
+
+                    <div class="skills-left">
+
+                        <div class="skill-pane active" id="hard-skills-pane">
+
+                            <div class="skill-category">
+                                <h3>Frontend</h3>
+
+                                <ul class="icon-list">
+                                    <li><img src="./assets/image/icon/html.png" alt="HTML5"></li>
+                                    <li><img src="./assets/image/icon/js.png" alt="JavaScript"></li>
+                                    <li><img src="./assets/image/icon/css.png" alt="CSS3"></li>
+                                    <li><img src="./assets/image/icon/react.png" alt="React"></li>
+                                    <li><img src="./assets/image/icon/typescript.png" alt="TypeScript"></li>
+                                    <li><img src="./assets/image/icon/nextjs.webp" alt="Next.js"></li>
+                                </ul>
+                            </div>
+
+                            <div class="skill-category">
+                                <h3>Backend</h3>
+
+                                <ul class="icon-list">
+                                    <li><img src="./assets/image/icon/c-sharp.png" alt="C#"></li>
+                                </ul>
+                            </div>
+
+                            <div class="skill-category">
+                                <h3>Banco de Dados</h3>
+
+                                <ul class="icon-list">
+                                    <li><img src="./assets/image/icon/sql.webp" alt="SQL"></li>
+                                </ul>
+                            </div>
+
+                            <div class="skill-category">
+                                <h3>Ferramentas</h3>
+
+                                <ul class="icon-list">
+                                    <li><img src="./assets/image/icon/git.png" alt="Git"></li>
+                                </ul>
+                            </div>
+
                         </div>
 
-                        <div class="skill-category">
-                            <h4>Backend</h4>
-                            <ul class="icon-list">
-                                <li><img src="./assets/image/icon/csharp.png" alt="C#"></li>
-                                <li><img src="./assets/image/icon/python.png" alt="Python"></li>
-                            </ul>
-                        </div>
+                        <div class="skill-pane" id="soft-skills-pane">
+                            <dl class="soft-skills-list">
 
-                        <div class="skill-category">
-                            <h4>Banco de Dados</h4>
-                            <ul class="icon-list">
-                                <li><img src="./assets/image/icon/sql.png" alt="SQL"></li>
-                            </ul>
-                        </div>
+                                <div class="soft-skill-item">
+                                    <dt>Comunicação Assertiva</dt>
+                                    <dd>
+                                        Foco em transmitir informações técnicas de forma clara e objetiva. Experiência em traduzir conceitos complexos para diferentes públicos, lapidada em palestras e mentorias.
+                                    </dd>
+                                </div>
 
-                        <div class="skill-category">
-                            <h4>Ferramentas</h4>
-                            <ul class="icon-list">
-                                <li><img src="./assets/image/icon/git.png" alt="Git"></li>
-                            </ul>
+                                <div class="soft-skill-item">
+                                    <dt>Trabalho em Equipe</dt>
+                                    <dd>
+                                        Atuação colaborativa focada em resultados comuns. Experiência prática na coordenação de grupos de monitores, garantindo alinhamento e suporte mútuo.
+                                    </dd>
+                                </div>
+
+                                <div class="soft-skill-item">
+                                    <dt>Adaptabilidade Técnica</dt>
+                                    <dd>
+                                        Capacidade de transitar entre diferentes stacks e tecnologias conforme a necessidade do projeto, priorizando a lógica de solução sobre a ferramenta.
+                                    </dd>
+                                </div>
+
+                                <div class="soft-skill-item">
+                                    <dt>Pensamento Estruturado (Solution First)</dt>
+                                    <dd>
+                                        Abordagem investigativa para entender a real dor do problema antes da codificação. Acredito que perguntar corretamente é o primeiro passo para uma entrega precisa.
+                                    </dd>
+                                </div>
+
+                            </dl>
                         </div>
 
                     </div>
 
-                    <div class="skill-pane" id="soft-skills-pane" style="display: none;">
-                        <dl class="soft-skills-list">
-                            <div class="soft-skill-item">
-                                <dt>Comunicação Assertiva</dt>
-                                <dd>Foco em transmitir informações técnicas de forma clara e objetiva. Experiência em traduzir conceitos complexos para diferentes públicos, lapidada em palestras e mentorias.</dd>
-                            </div>
-                            <div class="soft-skill-item">
-                                <dt>Trabalho em Equipe</dt>
-                                <dd>Atuação colaborativa focada em resultados comuns. Experiência prática na coordenação de grupos de monitores, garantindo alinhamento e suporte mútuo.</dd>
-                            </div>
-                            <div class="soft-skill-item">
-                                <dt>Adaptabilidade Técnica</dt>
-                                <dd>Capacidade de transitar entre diferentes stacks e tecnologias conforme a necessidade do projeto, priorizando a lógica de solução sobre a ferramenta.</dd>
-                            </div>
-                            <div class="soft-skill-item">
-                                <dt>Pensamento Estruturado</dt>
-                                <dd>Abordagem investigativa para entender a real dor do problema antes da codificação. Acredito que perguntar corretamente é o primeiro passo para uma entrega precisa.</dd>
-                            </div>
-                        </dl>
+                    <div class="skills-right">
+                        <img src="./assets/image/hero/aelyshud.jpeg" alt="Mascote mexendo em HUD de RPG">
                     </div>
+
                 </div>
             </div>
         </section>
 
-        <section id="aboutme" class="aboutMe section-plate">
-            <div class="container">
-                <h2>Sobre mim</h2>
-                <div class="aboutMe-content">
-                    <p>Estudante de ADS com cerca de 3 anos de dedicação à programação, focado em construir soluções que aliam lógica estruturada e impacto real. Minha trajetória é marcada pela versatilidade: trago a disciplina e o rigor, com prazos que desenvolvi no setor administrativo industrial, somados à experiência de liderança e à comunicação clara que adquiri ao coordenar projetos de inclusão digital para idosos. Atualmente, foco em organizar e documentar meu ecossistema de projetos no GitHub, priorizando sempre a arquitetura e a qualidade da entrega final.</p>
+        <section id="aboutme" class="aboutme section-plate">
+            <div class="container aboutme-container">
+
+                <div class="aboutme-text">
+                    <h2>Sobre mim</h2>
+                    <p> Olá! Sou Antonio Marcos, estudante de ADS com cerca de 3 anos de dedicação à programação, focado em construir soluções que
+                        aliam lógica estruturada e impacto real. Minha trajetória é marcada pela versatilidade: trago a
+                        disciplina e o rigor, com prazos que desenvolvi no setor administrativo industrial, somados à
+                        experiência de liderança e à comunicação clara que adquiri ao coordenar projetos de inclusão
+                        digital para idosos. Atualmente, foco em organizar e documentar meu ecossistema de projetos no
+                        GitHub, priorizando sempre a arquitetura e a qualidade da entrega final.</p>
                 </div>
-                <div class="aboutMe-highlight">
+                <div class="aboutme-highlight">
                     <h3>Destaques rápidos</h3>
                     <ul>
                         <li>🎓Cursando ADS (Unisanta)</li>
@@ -169,7 +247,8 @@
                     </li>
                     <li>
                         <img src="./assets/image/icon/linkedin.png" alt="LinkedIn">
-                        <a href="https://www.linkedin.com/in/ant%C3%B4nio-marcos-f-dias-b8a79a2b7/" target="_blank" rel="noopener noreferrer">Antonio Marcos F. Dias</a>
+                        <a href="https://www.linkedin.com/in/ant%C3%B4nio-marcos-f-dias-b8a79a2b7/" target="_blank"
+                            rel="noopener noreferrer">Antonio Marcos F. Dias</a>
                     </li>
                     <li>
                         <img src="./assets/image/icon/github.png" alt="GitHub">
@@ -184,6 +263,7 @@
         </div>
     </footer>
 
-    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./assets/js/main.js"></script>
 </body>
+
 </html>

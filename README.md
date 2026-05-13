@@ -5,9 +5,9 @@ Projeto de portfólio pessoal criado com HTML e CSS. O site apresenta uma págin
 ## 📌 Visão geral
 
 - **Título do site:** Portifolio
-- **Tecnologias:** HTML5, CSS3
-- **Arquitetura:** CSS modular por componentes
-- **Imagens:** arquivo `image/` contém ícones, projetos, status e elementos visuais
+- **Tecnologias:** HTML5, CSS3, Javascript
+- **Arquitetura:** CSS e Javascript modular por componentes
+- **Imagens:** arquivo `image/` contém pastas de ícones, de projetos, de status e elementos visuais
 
 ## 🧩 Estrutura do projeto
 
@@ -15,21 +15,22 @@ Projeto de portfólio pessoal criado com HTML e CSS. O site apresenta uma págin
 templateSite2/
 ├── index.html              # Página principal
 ├── README.md               # Documentação
-├── css/
-│   ├── reset.css           # Normalização de estilos
-│   ├── style.css           # Estilos globais e variáveis
-│   ├── variable.css        # Estilo de fontes
-│   └── components/
-│       ├── header.css      # Estilos do header e navegação
-│       ├── hero.css        # Estilos do hero
-│       ├── projects.css    # Estilos da parte de Project
-│       ├── projectcard.css # Estilos dos cards de projeto
-│       └── footer.css      # Estilos do footer
-└── image/
-    ├── favicon/            # Ícone do site
-    ├── hero/               # Imagem do hero
-    ├── logo/               # Logo
-    └── projects/           # Imagens dos projetos
+└── assets/
+    ├── js/
+    │   ├── 
+    │   ├── data/
+    │   │   └── projects.js         # Armazena os projetos
+    │   ├── components/
+    │   │   ├── projectCard.js      # Constroi card
+    │   │   ├── galleryRender.js    # Renderiza card na tela
+    │   │   ├── filterLogic.js      # Logica do Filtro
+    │   │   └── tabsLogic.js        # Logica do Altenar nas Skills
+    ├── css/
+    │   ├── reset.css               # Normalização de estilos
+    │   ├── style.css               # Estilos globais e variáveis
+    │   ├── variable.css            # Estilo de fontes
+    │   └── components/             # Aglomerado de .css de cada seção ou ponto de grande estilização
+    └── image/                      # Aglomerado de pastas para organizar as imagens por tipo
 ```
 
 ## ✨ Funcionalidades
@@ -41,18 +42,18 @@ templateSite2/
 
 
 ## 💡 Observações
---
 
 ## 🔧 Melhorias
-- Adicionar estilos
+- Aprimorar os estilos
 - Adição de favicon e demais icones
-- Adicionar JS para os cards de Projetos
-- Adicionar JS para funcionamento do filtro
-
+- Comentar as seções do HTML
+- Adicionar a imagem dos demais projetos
+- Menu Hamburguer para responsividade a Celulares
+- Padronizar Icones e Imagens em .webp ou .png
 
 
 ## Versão
-- 0.2
-- Portifolio usando apenas HTML, CSS e Javascript
+- 0.9
+> | Portifolio usando apenas HTML, CSS e Javascript
 
 

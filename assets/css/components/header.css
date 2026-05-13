@@ -1,5 +1,9 @@
 @import url('../variable.css');
 
+/* ==================================================
+   HEADER
+================================================== */
+
 header {
     background-color: var(--bg-header-footer);
     color: var(--text-on-dark);
@@ -7,15 +11,15 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
-    /* Faz o header grudar no topo da tela */
     position: sticky;
     top: 0;
     z-index: 1000;
-    
-    /* Dá um destaque do fundo da página */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
+
+/* ==================================================
+    LOGO
+================================================== */
 
 header h1 a {
     text-decoration: none;
@@ -23,7 +27,6 @@ header h1 a {
     align-items: center;
 }
 
-/* Tratamento da Logo */
 header h1 img {
     height: 45px;
     transition: transform 0.3s ease;
@@ -33,6 +36,10 @@ header h1 img {
 header h1 img:hover {
     transform: scale(1.05);
 }
+
+/* ==================================================
+    NAVEGAÇÃO
+================================================== */
 
 header nav ul {
     display: flex;
@@ -51,4 +58,22 @@ header nav a {
 header nav a:hover {
     color: var(--color-white-pure);
     opacity: 0.7;
+}
+
+/* ==================================================
+   RESPONSIVO
+================================================== */
+
+/* Temporário */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 2rem;
+    }
+
+    header nav ul {
+        flex-direction: row;
+        gap: 2rem;
+    }
 }

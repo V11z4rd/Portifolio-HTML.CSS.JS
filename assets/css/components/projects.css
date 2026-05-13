@@ -1,108 +1,212 @@
-/* ===== projects Section Styles ===== */
+@import url('./projectcard.css');
+
+/* ==================================================
+   SECTION PROJETOS
+================================================== */
 
 .projects {
-    padding: 4rem 3rem;
-    background-color: #dfdfdf;
-    font-family: 'Ubuntu', sans-serif;
+    background: transparent;
+    box-shadow: none;
 }
 
-.projects h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #2b551a;
-    text-align: center;
-    margin-bottom: 3rem;
-    position: relative;
-}
+/* ==================================================
+   HEADER DA SECTION
+================================================== */
 
-.projects h2::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    background-color: #2b551a;
-    border-radius: 2px;
-}
-
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.projects-filter {
+.projects-header {
     display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
+    align-items: center;
+    gap: 2rem;
+
+    margin-bottom: 1rem;
+
     flex-wrap: wrap;
 }
 
+.projects-header h2 {
+    color: var(--color-white-off);
+
+    font-size: 3rem;
+    font-weight: var(--fw-bold);
+
+    margin: 0;
+}
+
+/* ==================================================
+   BARRA DE FILTRO
+================================================== */
+
+.projects-filter-bar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    background: var(--color-white-pure);
+
+    padding: 1rem 1.5rem;
+
+    min-height: 70px;
+
+    clip-path: polygon(
+        0 0,
+        94% 0,
+        100% 100%,
+        0% 100%
+    );
+}
+
+/* ==================================================
+   BOTÃO "TODOS"
+================================================== */
+
 .filter-btn {
-    padding: 0.5rem 1rem;
-    background-color: rgba(43, 85, 26, 0.2);
-    color: #ffffff;
-    border: 1px solid #2b551a;
-    border-radius: 6px;
+    border: none;
+
+    background: var(--color-blue-dark);
+    color: var(--color-white-off);
+
+    padding: 0.7rem 1.4rem;
+
+    border-radius: 999px;
+
+    font-weight: var(--fw-bold);
+    font-family: var(--fonte-principal);
+
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-family: 'Ubuntu', sans-serif;
+
+    transition: 0.25s ease;
 }
 
-.filter-btn:hover, .filter-btn.active {
-    background-color: #2b551a;
+.filter-btn:hover {
+    transform: translateY(-2px);
 }
 
-/* Responsive - Tablet */
-@media (max-width: 1024px) {
-    .projects {
-        padding: 3rem 2rem;
-    }
+/* ==================================================
+   BOTÕES DE ÍCONE
+================================================== */
 
-    .projects h2 {
-        font-size: 2rem;
-        margin-bottom: 2.5rem;
-    }
+.filter-icon {
+    border: none;
+    background: transparent;
 
-    .projects-grid {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 1.5rem;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    padding: 0;
+
+    transition: transform 0.25s ease;
 }
 
-/* Responsive - Mobile */
+.filter-icon:hover {
+    transform: translateY(-3px) scale(1.05);
+}
+
+.filter-icon img {
+    width: 38px;
+    height: 38px;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+/* ==================================================
+   CAIXA BRANCA
+================================================== */
+
+.projects-white-box {
+    background: var(--color-white-pure);
+
+    border-radius: var(--plate-radius);
+
+    padding: 2rem;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.35);
+}
+
+/* ==================================================
+   GRID DOS PROJETOS
+================================================== */
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(320px, 1fr));
+
+    gap: 3rem;
+}
+
+/* =========================================
+   EMPTY PROJECTS
+========================================= */
+
+.empty-projects {
+
+    width: 100%;
+
+    padding: 4rem 2rem;
+
+    text-align: center;
+}
+
+.empty-projects h3 {
+
+    color: var(--color-blue-dark);
+
+    font-size: 2rem;
+
+    margin-bottom: 1rem;
+}
+
+.empty-projects p {
+
+    color: var(--text-muted);
+
+    font-size: 1rem;
+}
+
+/* =========================================
+   ACTIVE FILTER
+========================================= */
+
+.filter-icon.active {
+
+    transform: scale(1.1);
+}
+
+.filter-icon.active img {
+
+    filter:
+        drop-shadow(
+            0 0 10px rgba(0,0,0,0.35)
+        );
+}
+
+/* ==================================================
+   RESPONSIVIDADE
+================================================== */
+
 @media (max-width: 768px) {
-    .projects {
-        padding: 2rem 1.5rem;
+
+    .projects-header {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    .projects h2 {
-        font-size: 1.8rem;
-        margin-bottom: 2rem;
-    }
+    .projects-filter-bar {
+        width: 100%;
 
-    .projects-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-}
+        overflow-x: auto;
 
-@media (max-width: 480px) {
-    .projects {
-        padding: 1.5rem 1rem;
-    }
-
-    .projects h2 {
-        font-size: 1.5rem;
+        padding: 1rem;
     }
 
     .projects-grid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
     }
 }

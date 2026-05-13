@@ -1,88 +1,214 @@
-/* Variáveis para facilitar sua vida */
+@import url('../variable.css');
 :root {
-    --cor-fundo-card: #ffffff;
-    --cor-detalhe: #333333;
-    --cor-cinza-claro: #f4f4f4;
-    --aba-ativa: #333333;
-    --aba-inativa: #cccccc;
+    --cor-fundo-card: #f5f5f5;
+    --cor-detalhe: #3a3a3a;
+    --cor-escura: #4d4d4d;
+    --cor-texto: #111;
 }
 
-/* Container das Abas */
+.skills {
+    padding: 4rem 0;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.skills-container {
+    position: relative;
+}
+
+
+/* ========================================
+   TABS
+======================================== */
+
 .skills-selector {
     display: flex;
-    gap: 5px;
-    margin-bottom: -2px; /* Encosta na borda do conteúdo */
+    align-items: flex-end;
+    gap: 0;
+    position: relative;
+    z-index: 2;
 }
 
 .selector-btn {
-    padding: 10px 30px;
     border: none;
     cursor: pointer;
-    font-weight: bold;
+
+    padding: 1.4rem 5rem;
+
+    font-size: 1rem;
+    font-weight: 800;
     text-transform: uppercase;
-    font-size: 0.8rem;
-    transition: all 0.3s;
-    
-    /* O SEGREDO DO MARCADOR: Cria o corte diagonal na direita */
-    background-color: var(--aba-inativa);
-    color: #666;
+
+    color: var(--color-on-dark);
+    background: var(--text-muted);
+
+    transition: 0.3s ease;
+
     clip-path: polygon(0 0, 85% 0, 100% 100%, 0% 100%);
 }
 
 .selector-btn.active {
-    background-color: var(--aba-ativa);
-    color: white;
-    padding-right: 40px; /* Aumenta um pouco a aba ativa */
+    background: var(--cor-fundo-card);
+    color: var(--text-on-light);
 }
 
-/* Área do Conteúdo (A "Folha" da pasta) */
-.skills-content {
-    border: 2px solid var(--aba-ativa);
-    padding: 2rem;
-    background-color: var(--cor-fundo-card);
-    min-height: 300px;
-}
+/* ========================================
+   PAINEL PRINCIPAL
+======================================== */
 
-/* Estilização da DL (Soft Skills) */
-.soft-skills-list {
+.skills-panel {
+    background: var(--cor-fundo-card);
+
     display: grid;
-    gap: 1.5rem;
+    grid-template-columns: 1fr 500px;
+
+    align-items: center;
+
+    gap: 2rem;
+
+    padding: 3rem;
+
+    min-height: 480px;
 }
 
-.soft-skill-item {
-    border-left: 4px solid var(--aba-ativa); /* Barrinha lateral elegante */
-    padding-left: 1rem;
+/* ========================================
+   COLUNA ESQUERDA
+======================================== */
+
+.skills-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
-.soft-skill-item dt {
+.skill-category h3 {
+    font-size: 2.4rem;
     font-weight: 800;
-    font-size: 1.1rem;
-    color: var(--aba-ativa);
-    margin-bottom: 0.3rem;
+
+    margin-bottom: 1rem;
+
+    color: var(--text-on-light);
 }
 
-.soft-skill-item dd {
-    margin: 0; /* Remove o recuo padrão do navegador */
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: #555;
-}
+/* ========================================
+   ÍCONES
+======================================== */
 
 .icon-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    list-style: none;
+
+    gap: 1rem;
+
     padding: 0;
+    margin: 0;
+
+    list-style: none;
+}
+
+.icon-list li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .icon-list img {
-    height: 40px; /* Mantém todos do mesmo tamanho */
-    filter: grayscale(20%); /* Opcional: deixa mais sóbrio */
-    transition: transform 0.2s;
+    width: 48px;
+    height: 48px;
+
+    object-fit: contain;
+
+    transition: transform 0.25s ease;
 }
 
 .icon-list img:hover {
-    transform: scale(1.1);
-    filter: grayscale(0%);
+    transform: translateY(-5px) scale(1.08);
+}
+
+/* ========================================
+   IMAGEM
+======================================== */
+
+.skills-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills-right img {
+    width: 100%;
+    max-width: 420px;
+
+    object-fit: contain;
+}
+
+/* ========================================
+   SOFT SKILLS
+======================================== */
+
+.soft-skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.soft-skill-item dt {
+    font-size: 1.4rem;
+    font-weight: 700;
+
+    margin-bottom: 0.5rem;
+}
+
+.soft-skill-item dd {
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+
+/* =========================================
+   TAB PANES
+========================================= */
+
+.skill-pane {
+    display: none;
+}
+
+.skill-pane.active {
+    display: block;
+    color: var(--text-on-light);
+}
+
+
+/* ========================================
+   RESPONSIVO
+======================================== */
+
+@media (max-width: 980px) {
+
+    .skills-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-right {
+        order: -1;
+    }
+
+    .skills-right img {
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .selector-btn {
+        padding: 1rem 2.5rem;
+        font-size: 0.8rem;
+    }
+
+    .skill-category h3 {
+        font-size: 1.8rem;
+    }
+
+    .skills-panel {
+        padding: 2rem;
+    }
 }
